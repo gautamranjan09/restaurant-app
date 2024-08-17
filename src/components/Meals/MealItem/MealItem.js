@@ -1,6 +1,7 @@
 import React from "react";
 import { BsCurrencyRupee } from "react-icons/bs";
 import classes from "./MealItem.module.css";
+import MealItemForm from "./MealItemForm";
 
 const MealItem = (props) => {
   const price =`${props.price.toFixed(2)}`
@@ -13,7 +14,7 @@ const MealItem = (props) => {
         <div className={classes.price}><BsCurrencyRupee />{price}</div>
       </div>
       <div>
-
+        <MealItemForm id={props.id}/>
       </div>
     </li>
   );
